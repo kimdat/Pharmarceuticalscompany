@@ -1,0 +1,242 @@
+﻿.progressbar {
+    counter-reset: step;
+    padding: 0;
+}
+
+    .progressbar li {
+        float: left;
+        list-style: none;
+        position: relative;
+        text-align: center;
+        width: calc(100% / 3);
+    }
+
+        .progressbar li:before {
+            width: 60px;
+            height: 60px;
+            content: "";
+            line-height: 60px;
+            border: 2px solid #7d7d7d;
+            display: block;
+            text-align: center;
+            margin: 0 auto 3px auto;
+            border-radius: 50%;
+            position: relative;
+            content: counter(step);
+            counter-increment: step;
+            z-index: 2;
+            background-color: #fff;
+        }
+
+        .progressbar li:after {
+            width: 100%;
+            height: 2px;
+            content: '';
+            position: absolute;
+            background-color: #7d7d7d;
+            top: 30px;
+            left: -50%;
+            z-index: 0;
+        }
+
+        .progressbar li:first-child:after {
+            content: none;
+        }
+
+        .progressbar li.active:after,
+        .progressbar li.complete:after {
+            background: #3aac5d;
+        }
+
+        .progressbar li.active:before,
+        .progressbar li.complete:before {
+            background: #3aac5d;
+            border-color: #3aac5d;
+            color: #fff;
+        }
+
+        .progressbar li.active {
+            color: #3aac5d;
+            font-weight: 700;
+        }
+
+        .progressbar li.complete {
+            color: #3aac5d;
+            font-weight: 700;
+        }
+
+        .progressbar li:hover::before {
+            background-color: darkgray;
+            border-color: darkgray;
+            color: #fff;
+        }
+
+.nextpre a {
+    background-color: antiquewhite;
+    border: 1px solid;
+    color: black;
+    width: 100px;
+    margin-bottom: 10px;
+    height: 30px;
+    border-radius: 9px;
+    display: inline-flex;
+    text-decoration: none;
+    align-items: center; /*Vertical align*/
+    justify-content: center; /*horizontal align*/
+}
+
+    .nextpre a:hover {
+        background-color: darkgray;
+        text-decoration: none;
+    }
+
+.content {
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.carousel {
+    display: flex;
+}
+
+.item {
+    display: flex;
+    flex: 1 0 auto;
+}
+
+.tabcontent > input[type="submit"], input[type="text"],
+input[type="password"] {
+    width: 97%;
+    border-radius: 8px;
+}
+
+.tabcontent > input[type="submit"] {
+    margin-bottom: 20px;
+}
+
+.page-content {
+    width: 100%;
+    margin: 0 auto;
+    background-image: -moz-linear-gradient( 136deg, rgb(0,158,253) 0%, rgb(42,245,152) 100%);
+    background-image: -webkit-linear-gradient( 136deg, rgb(0,158,253) 0%, rgb(42,245,152) 100%);
+    background-image: -ms-linear-gradient( 136deg, rgb(0,158,253) 0%, rgb(42,245,152) 100%);
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -o-justify-content: center;
+    -ms-justify-content: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -o-align-items: center;
+    -ms-align-items: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+}
+
+.form-v8-content {
+    background-color: #E0E0E0;
+    width: 95%;
+    border-radius: 8px;
+    -o-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    -o-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    -ms-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    margin: 70px 0;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+    .form-v8-content .form-left {
+        background-color: white;
+        flex: 1;
+    }
+
+        .form-v8-content .form-left img {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 100%;
+            height: 100%;
+        }
+
+    .form-v8-content .form-right {
+        background-color: white;
+        flex: 2;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    .form-v8-content .tab {
+        border: solid transparent;
+        width: 100%;
+        display: flex;
+        display: -webkit-flex;
+        justify-content: space-between;
+        -o-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -webkit-justify-content: space-between;
+    }
+
+        .form-v8-content .tab .tab-inner {
+            width: 100%;
+        }
+
+        .form-v8-content .tab .tablinks {
+            background: transparent;
+            border: none;
+            outline: none;
+            -o-outline: none;
+            -ms-outline: none;
+            -moz-outline: none;
+            -webkit-outline: none;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 28px;
+            font-weight: 400;
+            color: black;
+            padding-bottom: 22px;
+            border-bottom: 3px solid;
+            border-bottom-color: rgba(255, 255, 255, 0.2);
+            width: 100%;
+        }
+
+            .form-v8-content .tab .tablinks.active {
+                font-weight: 700;
+                color: #fff;
+                background-color: limegreen;
+                border-bottom-color: #30e1df;
+            }
+
+@media screen and (max-width: 991px) {
+    .form-v8-content {
+        margin: 180px 20px;
+        flex-direction: column;
+        -o-flex-direction: column;
+        -ms-flex-direction: column;
+        -moz-flex-direction: column;
+        -webkit-flex-direction: column;
+    }
+
+
+        .form-v8-content .tab {
+            margin-top: 45px;
+        }
+
+
+
+    @media screen and (max-width: 325px) {
+        .form-v8-content .tab {
+            flex-direction: column;
+            -o-flex-direction: column;
+            -ms-flex-direction: column;
+            -moz-flex-direction: column;
+            -webkit-flex-direction: column;
+        }
+    }
+}
