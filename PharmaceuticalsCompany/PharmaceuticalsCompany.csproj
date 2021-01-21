@@ -6,8 +6,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Data\Migration\20210121065319_Extend__IdentityUser.cs" />
+    <Compile Remove="Data\Migration\20210121123643_Extend__IdentityUser.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
   </ItemGroup>
 
   <ItemGroup>

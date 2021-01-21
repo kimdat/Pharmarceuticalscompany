@@ -8,7 +8,7 @@ namespace PharmaceuticalsCompany.Services.Career
     public interface ICareerService
     {
          Task<CareerModel> Login(CareerModel candidate);
-        Task<CareerModel> Register(CareerModel model);
+        Task<CareerModel> Register(CareerModel model, Education newEducation);
         Task<CareerModel> Logout();
     }
 }

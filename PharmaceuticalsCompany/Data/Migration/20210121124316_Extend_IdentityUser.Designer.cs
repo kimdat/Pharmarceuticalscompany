@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PharmaceuticalsCompany.Data;
 
 namespace PharmaceuticalsCompany.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210121124316_Extend_IdentityUser")]
+    partial class Extend_IdentityUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -85,11 +87,9 @@ namespace PharmaceuticalsCompany.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.Property<string>("LoginProvider")
-                        .HasMaxLength(128);
+                    b.Property<string>("LoginProvider");
 
-                    b.Property<string>("ProviderKey")
-                        .HasMaxLength(128);
+                    b.Property<string>("ProviderKey");
 
                     b.Property<string>("ProviderDisplayName");
 
@@ -120,11 +120,9 @@ namespace PharmaceuticalsCompany.Data.Migrations
                 {
                     b.Property<string>("UserId");
 
-                    b.Property<string>("LoginProvider")
-                        .HasMaxLength(128);
+                    b.Property<string>("LoginProvider");
 
-                    b.Property<string>("Name")
-                        .HasMaxLength(128);
+                    b.Property<string>("Name");
 
                     b.Property<string>("Value");
 
@@ -170,6 +168,8 @@ namespace PharmaceuticalsCompany.Data.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed");
 
+                    b.Property<string>("Photo");
+
                     b.Property<string>("Resume");
 
                     b.Property<string>("SecurityStamp");
@@ -190,6 +190,38 @@ namespace PharmaceuticalsCompany.Data.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
+                });
+
+            modelBuilder.Entity("PharmaceuticalsCompany.Models.Career.Education", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Location");
+
+                    b.Property<string>("Name_school");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Educations");
+                });
+
+            modelBuilder.Entity("PharmaceuticalsCompany.Models.Career.EducationCareer", b =>
+                {
+                    b.Property<string>("User_Id");
+
+                    b.Property<int>("Education_Id");
+
+                    b.Property<DateTime>("EndDate");
+
+                    b.Property<DateTime>("JoinDate");
+
+                    b.HasKey("User_Id", "Education_Id");
+
+                    b.HasAlternateKey("Education_Id", "User_Id");
+
+                    b.ToTable("EducationCareers");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

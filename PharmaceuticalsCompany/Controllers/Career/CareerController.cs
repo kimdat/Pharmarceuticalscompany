@@ -56,11 +56,18 @@ namespace PharmaceuticalsCompany.Controllers.Candidate
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register(CareerModel candidate, IFormFile file)
+        public async Task<IActionResult> Register(CareerModel candidate, IFormFile file,Education newEducation,IFormFile fileUser)
         {
           
                 try
             {
+                if(fileUser.Length>0)
+                {
+                    var filePath = Path.Combine("wwwroot/images", fileUser.FileName);
+                    var stream = new FileStream(filePath, FileMode.Create);
+                    await file.CopyToAsync(stream);
+                    candidate.Photo = "/images/" + fileUser.FileName;
+                }
                 if (file.Length > 0)
                 {
                     var filePath = Path.Combine("wwwroot/file", file.FileName);
@@ -68,11 +75,11 @@ namespace PharmaceuticalsCompany.Controllers.Candidate
                     await file.CopyToAsync(stream);
                     candidate.Resume = "/file/" + file.FileName;
                 }
-                var result = await services.Register(candidate);
+                var result = await services.Register(candidate, newEducation);
                     if (result != null)
                     {
                        
-                        return RedirectToAction("index", "Home");
+                        return RedirectToAction("index", "Career");
                     }
                     else
                     {

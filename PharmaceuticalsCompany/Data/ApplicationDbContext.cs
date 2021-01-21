@@ -13,5 +13,13 @@ namespace PharmaceuticalsCompany.Data
             : base(options)
         {
         }
+        public DbSet<Education> Educations { get; set; }
+        public DbSet<EducationCareer> EducationCareers { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<EducationCareer>()
+                .HasKey(c => new { c.User_Id ,c.Education_Id});
+        }
     }
 }

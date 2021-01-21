@@ -2,7 +2,6 @@ D:\FPTAPTECH\DoAn\Doan\PharmaceuticalsCompany\PharmaceuticalsCompany\obj\Debug\n
 D:\FPTAPTECH\DoAn\Doan\PharmaceuticalsCompany\PharmaceuticalsCompany\obj\Debug\netcoreapp2.1\PharmaceuticalsCompany.csproj.CoreCompileInputs.cache
 D:\FPTAPTECH\DoAn\Doan\PharmaceuticalsCompany\PharmaceuticalsCompany\obj\Debug\netcoreapp2.1\PharmaceuticalsCompany.RazorAssemblyInfo.cache
 D:\FPTAPTECH\DoAn\Doan\PharmaceuticalsCompany\PharmaceuticalsCompany\obj\Debug\netcoreapp2.1\PharmaceuticalsCompany.RazorAssemblyInfo.cs
-D:\FPTAPTECH\DoAn\Doan\PharmaceuticalsCompany\PharmaceuticalsCompany\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 D:\FPTAPTECH\DoAn\Doan\PharmaceuticalsCompany\PharmaceuticalsCompany\obj\Debug\netcoreapp2.1\PharmaceuticalsCompany.AssemblyInfoInputs.cache
 D:\FPTAPTECH\DoAn\Doan\PharmaceuticalsCompany\PharmaceuticalsCompany\obj\Debug\netcoreapp2.1\PharmaceuticalsCompany.AssemblyInfo.cs
 D:\FPTAPTECH\DoAn\Doan\PharmaceuticalsCompany\PharmaceuticalsCompany\bin\Debug\netcoreapp2.1\PharmaceuticalsCompany.deps.json
@@ -37,3 +36,5 @@ D:\FPTAPTECH\DoAn\Doan\PharmaceuticalsCompany\PharmaceuticalsCompany\obj\Debug\n
 D:\FPTAPTECH\DoAn\Doan\PharmaceuticalsCompany\PharmaceuticalsCompany\obj\Debug\netcoreapp2.1\PharmaceuticalsCompany.dll
 D:\FPTAPTECH\DoAn\Doan\PharmaceuticalsCompany\PharmaceuticalsCompany\obj\Debug\netcoreapp2.1\PharmaceuticalsCompany.pdb
 D:\FPTAPTECH\DoAn\Doan\PharmaceuticalsCompany\PharmaceuticalsCompany\obj\Debug\netcoreapp2.1\PharmaceuticalsCompany.csproj.CopyComplete
+D:\FPTAPTECH\DoAn\Doan\PharmaceuticalsCompany\PharmaceuticalsCompany\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+D:\FPTAPTECH\DoAn\Doan\PharmaceuticalsCompany\PharmaceuticalsCompany\obj\Debug\netcoreapp2.1\Razor\Views\Career\Index.g.cshtml.cs
